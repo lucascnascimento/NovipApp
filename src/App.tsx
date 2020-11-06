@@ -1,10 +1,17 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 declare const global: {HermesInternal: null | {}};
 
+import Navigator from './Navigator';
+
 const App = () => {
-  return <Text>Hello World</Text>;
+  return (
+    <NavigationContainer>
+      <Navigator />
+    </NavigationContainer>
+  );
 };
 
 export default App;
