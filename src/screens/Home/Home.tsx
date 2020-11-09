@@ -1,20 +1,41 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Text} from 'react-native';
-import {Button} from 'react-native-paper';
+import {Image, StyleSheet} from 'react-native';
+import {data} from '../../assets/images';
+import {BasePaperButton} from '../../styles/baseStyles';
 
-// import { Container } from './styles';
+import {Container} from './styles';
 
-const Home: React.FC = () => {
+const styles = StyleSheet.create({
+  tinyLogo: {
+    width: 230,
+    height: 230,
+  },
+});
+
+import {Props} from './types';
+
+const Home: React.FC<Props> = () => {
+  const navigation = useNavigation();
+
   return (
-    <>
-      <Text>Selecione o estado</Text>
-      <Button mode="contained" onPress={() => console.log('Novo cadastro')}>
+    <Container>
+      <Image
+        source={data[0].imageLink}
+        style={styles.tinyLogo}
+        resizeMode="contain"
+      />
+      <BasePaperButton
+        mode="contained"
+        onPress={() => navigation.navigate('SelectState')}>
         Novo Cadastro
-      </Button>
-      <Button mode="contained" onPress={() => console.log('Cadastros')}>
+      </BasePaperButton>
+      <BasePaperButton
+        mode="contained"
+        onPress={() => navigation.navigate('Clients')}>
         Clientes cadastrados
-      </Button>
-    </>
+      </BasePaperButton>
+    </Container>
   );
 };
 
