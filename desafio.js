@@ -1,5 +1,5 @@
 function geraTodasAsChaves(n, resposta) {
-  var todasChaves = [];
+  var arrayDeChaves = [];
   for (var i = 0; i < 1 << n; i++) {
     var tempChave = [];
     for (var j = 0; j < n; j++) {
@@ -9,9 +9,9 @@ function geraTodasAsChaves(n, resposta) {
     if (chaveString === resposta) {
       console.log(`Resposta na posição: ${i}`);
     }
-    todasChaves.push(chaveString);
+    arrayDeChaves.push(chaveString);
   }
-  return todasChaves;
+  return arrayDeChaves;
 }
 
 const res = geraTodasAsChaves(10, 'ABAABBABAB');
