@@ -143,7 +143,6 @@ const NewClient: React.FC<Props> = ({route}: Props) => {
           label="CPF"
           placeholder="111.111.111-11"
           onChangeText={(text) => {
-            console.log(text);
             formik.setFieldValue('cpf', cpfMask(text));
           }}
           value={formik.values.cpf}
@@ -163,7 +162,6 @@ const NewClient: React.FC<Props> = ({route}: Props) => {
                 label="RG"
                 placeholder="11.111.111"
                 onChangeText={(text) => {
-                  console.log(text);
                   formik.setFieldValue('rg', rgMask(text));
                 }}
                 value={formik.values.rg}
