@@ -54,6 +54,7 @@ const NewClient: React.FC<Props> = ({route}: Props) => {
     birth: Yup.string(),
   });
 
+  // Formik Configuration
   const formik = useFormik({
     initialValues: initialValues,
     validationSchema: validationSchema,

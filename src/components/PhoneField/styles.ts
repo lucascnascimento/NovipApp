@@ -24,5 +24,4 @@ export const TouchableOpacityButton = styled(BaseTouchableOpacityButton)`
 export const ButtonText = styled.Text`
   color: white;
   font-size: 24px;
-  padding: 4px 0px;
 `;
